@@ -1,8 +1,7 @@
-<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>FTP Rush 3.66 FTPS/SFTP 클라우드 스토리지 클라이언트 사용법 완벽 가이드</title>
+    <title>corgiplayer - 안드로이드 네트워크 비디오 플레이어 앱 사용법 (FTP, SMB, WebDAV 지원)</title>
     <style>
         body {
             font-family: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
@@ -23,12 +22,12 @@
             font-size: 26px;
             color: #2c3e50;
             margin-bottom: 20px;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid #e67e22;
             padding-bottom: 10px;
         }
         h2 {
             font-size: 20px;
-            color: #2980b9;
+            color: #d35400;
             margin-top: 35px;
             margin-bottom: 15px;
         }
@@ -43,8 +42,9 @@
             font-size: 15px;
         }
         .step-box {
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
+            background: #fdfefe;
+            border-left: 4px solid #e67e22;
+            border: 1px solid #f5cba7;
             padding: 15px 20px;
             margin: 20px 0;
             border-radius: 0 4px 4px 0;
@@ -58,8 +58,8 @@
             font-size: 15px;
         }
         .tip {
-            background: #e8f4fd;
-            border: 1px solid #bbe1fa;
+            background: #fef5e7;
+            border: 1px solid #f8c471;
             padding: 15px;
             border-radius: 6px;
             margin: 20px 0;
@@ -72,10 +72,9 @@
             font-size: 14px;
             color: #c7254e;
         }
-        /* 반응형 이미지 스타일 */
         .post-image-wrap {
             text-align: center;
-            margin: 20px 0;
+            margin: 25px 0;
         }
         .post-image-wrap img {
             max-width: 100%;
@@ -103,70 +102,69 @@
 </head>
 <body>
 <div class="post-container">
-    <h1>FTP Rush 3.66 FTPS/SFTP 클라우드 스토리지 클라이언트 사용법 총정리</h1>
+    <h1>corgiplayer - 안드로이드 네트워크 스트리밍 비디오 플레이어 앱 사용법 완벽 가이드</h1>
     
-    <p>안녕하세요! 오늘은 대용량 파일 전송과 멀티 세션 처리에 뛰어난 고성능 FTP/SFTP 클라이언트인 <strong>FTP Rush</strong>의 사용법을 상세히 알아보겠습니다. 초보자분들도 쉽게 따라 하실 수 있도록 화면 구성과 접속 설정, 파일 전송 방법까지 단계별로 정리해 드립니다.</p>
+    <p>안녕하세요! 오늘은 NAS나 홈 서버, 원격 FTP/SMB/SFTP/WebDAV 서버에 저장된 동영상을 스마트폰에서 간편하게 스트리밍하고 재생할 수 있는 모바일 전용 고성능 미디어 플레이어인 <strong>corgiplayer</strong>(코기플레이어) 앱의 사용법을 자세히 알아보겠습니다.</p>
 
     <hr style="border:0; border-top:1px solid #eee; margin:30px 0;">
 
-    <h2>1. 프로그램 첫 실행 및 인터페이스 구성</h2>
-    <p>FTP Rush를 처음 실행하면 아래와 같은 깔끔한 듀얼 패널 인터페이스가 반겨줍니다. 좌측은 원격 서버, 우측은 내 컴퓨터(로컬)의 파일 구조를 한눈에 비교하고 관리할 수 있도록 설계되어 있습니다.</p>
+    <h2>1. corgiplayer 주요 특징 및 앱 개요</h2>
+    <p>corgiplayer는 깔끔한 UI와 직관적인 제스처 컨트롤을 제공하며, 다양한 네트워크 프로토콜을 완벽하게 지원하는 스마트폰 최적화 비디오 플레이어입니다.</p>
     
     <div class="post-image-wrap">
-        <a href="https://kkull.blog.fc2.com/img/u11.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/u11.jpg" alt="FTP Rush 메인 실행 화면 및 상단 접속 바"></a>
+        <a href="https://blog-imgs-160.fc2.com/k/k/u/kkull/vv2.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/vv2.jpg" alt="corgiplayer 구글 플레이스토어 소개 및 주요 기능"></a>
     </div>
 
     <ul>
-        <li><strong>상단 접속 바:</strong> 프로토콜, 암호화 방식, 호스트 주소, 포트, 사용자 이름, 암호를 곧바로 입력하여 빠른 접속을 수행할 수 있습니다.</li>
-        <li><strong>좌측 패널 (서버):</strong> 접속한 원격 FTP 서버의 디렉토리 및 파일 목록이 표시됩니다.</li>
-        <li><strong>우측 패널 (로컬):</strong> 현재 작업 중인 내 PC의 로컬 디렉토리 경로와 파일들이 표시됩니다.</li>
+        <li><strong>폭넓은 프로토콜 지원:</strong> WebDAV, SMB, FTP, SFTP 등 다양한 네트워크 연결 방식을 지원하여 원격 저장소에 쉽게 접근할 수 있습니다.</li>
+        <li><strong>로컬 및 네트워크 재생:</strong> 스마트폰 내부에 저장된 로컬 파일 재생뿐만 아니라 외부 서버 스트리밍에 최적화되어 있습니다.</li>
+        <li><strong>편리한 제스처 컨트롤:</strong> 화면 밝기, 볼륨 조절, 탐색 등을 화면 터치 제스처로 쾌적하게 제어할 수 있습니다.</li>
     </ul>
 
-    <h2>2. 사이트 관리자를 통한 서버 등록 및 연결 설정</h2>
-    <p>매번 접속 정보를 입력하기 번거롭다면 <strong>사이트 관리자</strong> 기능을 통해 주소와 계정을 미리 저장해 둘 수 있습니다.</p>
+    <h2>2. 네트워크 연결 추가 및 설정 방법 (FTP 기준)</h2>
+    <p>앱 하단의 <strong>네트워크</strong> 탭으로 이동한 뒤, 우측 하단의 <code>+</code> 버튼을 누르면 SMB, SFTP, FTP, WebDAV, URL 열기 등 다양한 연결 방식을 선택할 수 있습니다.</p>
     
     <div class="post-image-wrap">
-        <a href="https://kkull.blog.fc2.com/img/u22.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/u22.jpg" alt="사이트 관리자 설정 창 (호스트, 포트, 계정 정보 입력)"></a>
+        <a href="https://blog-imgs-160.fc2.com/k/k/u/kkull/vv5.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/vv5.jpg" alt="네트워크 탭에서 FTP, SMB 등 프로토콜 추가 메뉴 화면"></a>
+    </div>
+
+    <p>FTP 연결을 선택하면 연결 이름과 최종 접속 URL을 입력하는 화면이 나타납니다. 서버 주소와 포트 번호, 경로를 정확히 입력합니다.</p>
+
+    <div class="post-image-wrap">
+        <a href="https://blog-imgs-160.fc2.com/k/k/u/kkull/v77.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/v77.jpg" alt="FTP 연결 추가 및 최종 접속 URL 설정 화면"></a>
     </div>
 
     <div class="step-box">
-        <h3>📌 사이트 등록 순서</h3>
+        <h3>📌 FTP 연결 설정 순서</h3>
         <ul>
-            <li>상단 메뉴에서 <strong>사이트 관리자</strong> 아이콘을 클릭합니다.</li>
-            <li>원하는 폴더 위치(예: <code>FTPRush 사이트</code> 등)를 선택하고 하단의 <code>+</code> 버튼을 눌러 새 사이트를 추가합니다.</li>
-            <li><strong>호스트:</strong> 접속할 서버 주소 입력 (예: <code>kkull.ipdisk.co.kr</code>)</li>
-            <li><strong>포트:</strong> 포트 번호 입력 (<code>25</code>)</li>
-            <li><strong>사용자 이름 및 암호:</strong> 발급받은 계정 정보 입력 후 <strong>연결</strong> 버튼 클릭</li>
+            <li><strong>연결 이름:</strong> 구분을 위한 별칭 입력 (예: <code>Horror</code> 등)</li>
+            <li><strong>최종 접속 URL:</strong> 예시처럼 프로토콜과 주소, 포트, 폴더 경로 입력 (예: <code>ftp://kkull.ipdisk.co.kr:25/HDD2</code>)</li>
+            <li><strong>연결 테스트:</strong> 하단의 <strong>연결 테스트</strong> 버튼을 눌러 정상 작동 여부를 확인합니다.</li>
         </ul>
     </div>
 
-    <h2>3. 서버 폴더 탐색 및 디렉토리 구조 확인</h2>
-    <p>서버에 정상적으로 로그인되면, 좌측 서버 패널에 원격 저장소의 드라이브 및 폴더 목록이 나타납니다.</p>
+    <h2>3. 사용자 계정 인증 및 로그인</h2>
+    <p>연결 테스트가 성공하거나 다음 단계로 넘어가면, 서버에 접근하기 위한 사용자 인증 정보를 입력하는 창이 나옵니다.</p>
     
     <div class="post-image-wrap">
-        <a href="https://kkull.blog.fc2.com/img/u33.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/u33.jpg" alt="서버 로그인 성공 후 HDD2 및 Horror 폴더 목록 표시 화면"></a>
+     <a href="https://blog-imgs-160.fc2.com/k/k/u/kkull/vv4.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/vv4.jpg" alt="FTP 연결 수정 및 사용자 이름, 비밀번호 입력 화면"></a>
     </div>
 
-    <p>서버 패널에 표시된 폴더(예: <code>HDD2/</code> -&gt; <code>Horror/</code> 등)를 더블클릭하면 하위 디렉토리로 부드럽게 진입할 수 있으며, 하단 로그 창을 통해 접속 상태와 디렉토리 목록 불러오기 성공 여부를 실시간으로 확인할 수 있습니다.</p>
+    <ul>
+        <li><strong>사용자 이름:</strong> 서버에 등록된 계정 ID 입력 (예: <code>gold</code>)</li>
+        <li><strong>비밀번호:</strong> 해당 계정의 비밀번호 입력 후 <strong>다음</strong> 또는 <strong>추가</strong>를 누르면 등록이 완료됩니다.</li>
+    </ul>
 
-    <h2>4. 파일 전송(다운로드 / 업로드) 방법</h2>
-    <p>FTP Rush는 드래그 앤 드롭뿐만 아니라 직관적인 마우스 우클릭 메뉴를 통해 간편하게 파일을 주고받을 수 있습니다.</p>
+
+ <h2>4. FTP 연결 및 이름 설정</h2>
+    <p>사용자 정보를 입력후에 연결이름을 작성해줍니다.자연스럽게(?)Horror로 해보겠습니다.작성후 연결테스트를 누른후 추가해 줍니다..</p>
     
     <div class="post-image-wrap">
-        <a href="https://kkull.blog.fc2.com/img/u44.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/u44.jpg" alt="파일 우클릭 전송 메뉴 및 하단 전송 진행 상태 바"></a>
+     <a href="https://blog-imgs-160.fc2.com/k/k/u/kkull/vv6.jpg/" target="_blank"><img src="https://blog-imgs-160.fc2.com/k/k/u/kkull/vv6.jpg" alt="FTP 연결 수정 및 사용자 이름, 비밀번호 입력 화면"></a>
     </div>
 
-    <div class="step-box">
-        <h3>📌 파일 전송(다운로드) 진행하기</h3>
-        <ul>
-            <li>서버 패널에서 전송(다운로드)하고자 하는 파일을 선택합니다 (예: 동영상 파일 등).</li>
-            <li>마우스 우클릭을 한 뒤 <strong>전송 (Ctrl + T)</strong> 메뉴를 클릭합니다.</li>
-            <li>우측 로컬 경로로 파일이 즉시 다운로드되며, 하단 상태 바에서 전송 속도, 용량, 진행률을 모니터링할 수 있습니다.</li>
-        </ul>
-    </div>
-<li>&nbsp;<a href="https://www.wftpserver.com/download/FTPRush.zip">Download (포터블)</a></li>
     <div class="tip">
-        <strong>💡 Tip:</strong> FTP Rush는 멀티 스레드 전송을 지원하여 대용량 파일도 끊김 없이 안정적으로 고속 전송이 가능합니다. 
+        <strong>💡 Tip:</strong> 추가로 등록된 네트워크 서버들은 메인 네트워크 화면에 카드 형태로 깔끔하게 정렬되며, 언제든지 우측 메뉴 버튼을 통해 설정을 수정하거나 삭제할 수 있습니다. 스마트폰으로 홈 서버나 NAS의 영상들을 쉽고 빠르게 즐겨보세요!
     </div>
 
     <hr style="border:0; border-top:1px solid #eee; margin:30px 0;">
